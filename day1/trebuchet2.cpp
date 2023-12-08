@@ -18,7 +18,7 @@ std::pair<size_t, size_t> findOccurenceBounds(const std::string& line, const std
 		while (i != std::string::npos) {
 			i = line.find(word, rightmostIndex);
 			if (i != std::string::npos) {			// if the word is found more than once
-				rightmostIndex += word.length();
+				rightmostIndex = i + word.length();
 			}
 		}
 		return std::pair<size_t, size_t>(leftmostIndex, rightmostIndex);
